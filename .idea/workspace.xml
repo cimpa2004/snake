@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/program/Items/BlueItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/program/Items/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/program/Items/RedBlueFlickeringItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/program/Items/RedItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/program/Items/WhiteItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/TestMain.java" afterDir="false" />
+    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="added Items">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698160021241</updated>
       <workItem from="1698160022340" duration="169000" />
-      <workItem from="1698577622909" duration="2095000" />
+      <workItem from="1698577622909" duration="2344000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -111,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698160089175</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added Items">
+      <option name="closed" value="true" />
+      <created>1698579810066</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698579810066</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +121,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial" />
+    <MESSAGE value="default xml change" />
+    <MESSAGE value="added Items" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Items" />
   </component>
 </project>

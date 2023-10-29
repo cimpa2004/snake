@@ -8,6 +8,7 @@ public class Main {
                 TestMain.runTests();
             }
         }
+        
 
         while (true){//fo ciklus
             System.out.println("run");

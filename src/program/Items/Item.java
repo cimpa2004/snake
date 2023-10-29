@@ -22,6 +22,10 @@ public abstract class  Item {
     public int getRarity(){
         return rarity;
     }
+    public int getSizeadded(){return sizeadded;}
+    public int getPointsadded(){return pointsadded;}
+    public int getSpeedmodifyer(){return speedmodifyer;}
+    public int getSpeedchangedtime(){return speedchangedtime;}
     public void setXcord(int x){
         xcord = x;
     }
