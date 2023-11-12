@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="added getters to item">
-      <change afterPath="$PROJECT_DIR$/src/program/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" afterDir="false" />
+    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/program/Coord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/Items/Snake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/graphics/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +118,9 @@
       <workItem from="1698682044561" duration="153000" />
       <workItem from="1698753972086" duration="1344000" />
       <workItem from="1698755731003" duration="1024000" />
-      <workItem from="1698773985838" duration="5141000" />
+      <workItem from="1698773985838" duration="5321000" />
+      <workItem from="1699287719491" duration="68000" />
+      <workItem from="1699794707864" duration="9779000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -141,7 +146,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698580009631</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added windows,buttons, xml based highscore storage">
+      <option name="closed" value="true" />
+      <created>1698779228883</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698779228883</updated>
+    </task>
+    <task id="LOCAL-00005" summary="xml file initial commit">
+      <option name="closed" value="true" />
+      <created>1698779260785</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698779260785</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +173,8 @@
     <MESSAGE value="default xml change" />
     <MESSAGE value="added Items" />
     <MESSAGE value="added getters to item" />
-    <option name="LAST_COMMIT_MESSAGE" value="added getters to item" />
+    <MESSAGE value="Added windows,buttons, xml based highscore storage" />
+    <MESSAGE value="xml file initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml file initial commit" />
   </component>
 </project>

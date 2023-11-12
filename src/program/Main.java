@@ -1,6 +1,8 @@
 package program;
+import program.graphics.Game;
 import program.graphics.SnakeWindow;
 import tests.*;
+
 
 
 public class Main {
@@ -13,7 +15,7 @@ public class Main {
         }
 
         highscores.readFromXML("rangletra.xml");
-        highscores.print();
+        //highscores.print();
         SnakeWindow window = new SnakeWindow("snake",highscores);
 
         /*while (true){//fo ciklus
@@ -22,11 +24,13 @@ public class Main {
         }*/
 
 
+
+
     }
 
     public static void exit(){
-        //mentesek meg minden
-        highscores.writeToXML("rangletra.xml");
+        //mentesek meg minden//ne irogassuk at most minden futasra
+        //highscores.writeToXML("rangletra.xml");
         //
         System.exit(0);
     }

@@ -7,9 +7,8 @@ import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
-import java.io.IOException;
 
-public  class Data {
+public class Data {
 
     private Rangletra [] top5helyezett = new Rangletra[5];
 
