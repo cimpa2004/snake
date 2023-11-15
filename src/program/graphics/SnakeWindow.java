@@ -50,6 +50,7 @@ public class SnakeWindow extends JFrame {
 
 
 
+
     public void showMenu(){
         if (rangletraFrame.isVisible()){
             rangletraFrame.setVisible(false);
@@ -143,7 +144,9 @@ public class SnakeWindow extends JFrame {
         gameFrame = new JFrame("Game");
         gameFrame.add(snake);
         gameFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        gameFrame.setSize(1500,750);
+        gameFrame.setSize(1000,750);
+        gameFrame.setResizable(false);
+        gameFrame.getRootPane().setBorder(BorderFactory.createLineBorder(Color.BLACK, 10));
 
 
 

@@ -10,23 +10,57 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.geom.Rectangle2D;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Random;
 
-
+//collison map meret 950*690
 public class Snake extends JPanel implements ActionListener, KeyListener {
     double  velX = 0, velY = 0;
     public double velcoity = 2;
     private ArrayList<Coord> body = new ArrayList<>();
-    private int size = 30;
+    private int size = 30; //1 =10
     private Direction headed = Direction.UP;
     Timer t = new Timer(5,this);
     private boolean moved = false;
 
     private ArrayList<Coord> headRoute = new ArrayList<>();
 
+    //items vars and methods
+
+    private int hasBeenDownFor = 0; //updated in actionPerformed
+    private int indexOfCurrentItem = 0;
+    private boolean itemIsDown = false;
+
+    public boolean isItemDown(){
+        return itemIsDown;
+    }
+
+    private Item [] foods = new Item[4];
 
 
+    private void initItems(){
+        foods[0] = new BlueItem(-50,-50);
+        foods[1] = new PinkItem(-50,-50);
+        foods[2] = new RedItem(-50,-50);
+        foods[3] = new CyanItem(-50,-50);
+
+    }
+
+    private boolean isCoordinateOccupied(int x, int y) {
+        for (Coord bodyPart : body) {
+            if (bodyPart.x == x && bodyPart.y == y) {
+                return true;  // Coordinate is occupied by the snake
+            }
+        }
+        return false;  // Coordinate is not occupied
+    }
+
+
+
+
+    //snake:
     public void addSize(int siz) {
         size += siz;
 
@@ -44,6 +78,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
         addKeyListener(this);
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
+        initItems();
     }
 
     private void initializeSnake() {
@@ -74,11 +109,11 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
         Coord head = getHead();
         if (head.x < 0){
             return true;
-        }else if (head.x >= 1500) {
+        }else if (head.x >= 950) {
             return true;
         } else if (head.y < 0) {
             return true;
-        } else if (head.y >= 750) {
+        } else if (head.y >= 690) {
             return true;
         }
         return false;
@@ -114,6 +149,15 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
                 i++;
 
             }
+            g2.setColor(Color.blue);
+            g2.fill(new Rectangle2D.Double(foods[0].getXcord(),foods[0].getYcord(),20,20));
+            g2.setColor(Color.pink);
+            g2.fill(new Rectangle2D.Double(foods[1].getXcord(),foods[1].getYcord(),20,20));
+            g2.setColor(Color.red);
+            g2.fill(new Rectangle2D.Double(foods[2].getXcord(),foods[2].getYcord(),20,20));
+            g2.setColor(Color.cyan);
+            g2.fill(new Rectangle2D.Double(foods[3].getXcord(),foods[3].getYcord(),20,20));
+            g2.setColor(Color.black);
             if (hitWall() || selfCollision()) {
                 System.err.println("Vegeeeeeeeeeeee");
                 Main.exit();
@@ -136,6 +180,52 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
 
             updateBody(head);
 
+
+            //items
+            if (!isItemDown()) {
+                Random random = new Random();
+                int randomX, randomY;
+
+                do {
+                    randomX = random.nextInt(850);
+                    randomY = random.nextInt(600);
+                } while (isCoordinateOccupied(randomX, randomY));
+                int randomNumber = random.nextInt(100);
+                if (randomNumber <= 40 && randomNumber >= 1) { //40%
+                    foods[2].setXcord(randomX);
+                    foods[2].setYcord(randomY);
+                    itemIsDown = true;
+                } else if (randomNumber <= 60) { // de nagyobb mint 30 //20%
+                    foods[0].setXcord(randomX);
+                    foods[0].setYcord(randomY);
+                    itemIsDown = true;
+                } else if (randomNumber <= 80) { //de nagyobb mint 60 //20%
+                    foods[3].setXcord(randomX);
+                    foods[3].setYcord(randomY);
+                    itemIsDown = true;
+                } else if (randomNumber<=90){//de nagyobb mint 80 //10%
+                    foods[1].setXcord(randomX);
+                    foods[1].setYcord(randomY);
+                    itemIsDown = true;
+                }else {
+                    foods[2].setXcord(randomX);
+                    foods[2].setYcord(randomY);
+                    itemIsDown = true;
+                }
+
+            }
+
+
+            hasBeenDownFor++;
+            if (hasBeenDownFor >= 500){//100 ha debugolsz //500 ha nem
+                hasBeenDownFor = 0;
+                itemIsDown = false;
+                for (int i = 0; i<4; i++){
+                    foods[i].setXcord(-50);
+                    foods[i].setYcord(-50);
+                }
+                //remove item from board
+            }
             repaint();
         }
     }
