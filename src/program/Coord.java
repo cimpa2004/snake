@@ -12,9 +12,12 @@ public class Coord {
     }
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         Coord coord = (Coord) o;
-        return x == coord.x && y == coord.y;
+        return Double.compare(coord.x, x) == 0 && Double.compare(coord.y, y) == 0;
     }
+
 
     @Override
     public int hashCode() {

@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="aded a 1 long snake that can move countains Gama.java that is just for learning">
+    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="now the snakes movement is fine and its no longer a dot its a snake, but selfCollisons have issues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/Coord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Coord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/Items/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/Snake.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/graphics/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,22 +50,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/bzdez/Desktop/nagyHF/snake",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bzdez/Desktop/nagyHF/snake&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="program.Main" />
@@ -122,6 +122,7 @@
       <workItem from="1699794707864" duration="9853000" />
       <workItem from="1699892222781" duration="28000" />
       <workItem from="1700039428746" duration="5493000" />
+      <workItem from="1700052014285" duration="7388000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -171,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699804612817</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="now the snakes movement is fine and its no longer a dot its a snake, but selfCollisons have issues">
+      <option name="closed" value="true" />
+      <created>1700052206768</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700052206768</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +194,7 @@
     <MESSAGE value="Added windows,buttons, xml based highscore storage" />
     <MESSAGE value="xml file initial commit" />
     <MESSAGE value="aded a 1 long snake that can move countains Gama.java that is just for learning" />
-    <option name="LAST_COMMIT_MESSAGE" value="aded a 1 long snake that can move countains Gama.java that is just for learning" />
+    <MESSAGE value="now the snakes movement is fine and its no longer a dot its a snake, but selfCollisons have issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="now the snakes movement is fine and its no longer a dot its a snake, but selfCollisons have issues" />
   </component>
 </project>

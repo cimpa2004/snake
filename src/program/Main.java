@@ -7,6 +7,10 @@ import tests.*;
 
 public class Main {
     private static Data highscores = new Data();
+    public static Data getHighscores(){
+        return highscores;
+    }
+
     public static void main(String[] args) {
         if (args.length >0){
             if (args[0].equals("test")){
@@ -15,16 +19,7 @@ public class Main {
         }
 
         highscores.readFromXML("rangletra.xml");
-        //highscores.print();
-        SnakeWindow window = new SnakeWindow("snake",highscores);
-
-
-        /*while (true){//fo ciklus
-            System.out.println("run");
-
-        }*/
-
-
+        Game.Start();
 
 
     }
