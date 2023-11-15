@@ -37,13 +37,14 @@ public class SnakeWindow extends JFrame {
     private JLabel nevMegadLabel = new JLabel("Név:");
     private JTextField nevMegadField = new JTextField();
 
+
     //menu vege
 
     //game
 
     private JFrame gameFrame ;
-    Snake snake;
 
+    public static Snake snake = new Snake();
 
 
 
@@ -140,10 +141,9 @@ public class SnakeWindow extends JFrame {
 
         //game
         gameFrame = new JFrame("Game");
-        snake = new Snake();
         gameFrame.add(snake);
         gameFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        gameFrame.setSize(1500,1000);
+        gameFrame.setSize(1500,750);
 
 
 

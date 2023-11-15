@@ -18,6 +18,7 @@ public class Main {
         //highscores.print();
         SnakeWindow window = new SnakeWindow("snake",highscores);
 
+
         /*while (true){//fo ciklus
             System.out.println("run");
 
