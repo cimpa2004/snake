@@ -1,7 +1,6 @@
 package program.graphics;
 
 import program.*;
-import program.Items.Snake;
 
 import javax.swing.*;
 import java.awt.*;

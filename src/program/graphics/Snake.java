@@ -1,6 +1,7 @@
-package program.Items;
+package program.graphics;
 
 import program.Coord;
+import program.Items.*;
 import program.Main;
 
 import javax.swing.*;
@@ -10,34 +11,35 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.geom.Rectangle2D;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.Random;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 //collison map meret 950*690
 public class Snake extends JPanel implements ActionListener, KeyListener {
     double  velX = 0, velY = 0;
-    public double velcoity = 2;
+    public double velcoity = 3;
     private ArrayList<Coord> body = new ArrayList<>();
-    private int size = 30; //1 =10
+    private double size = 30; //1 =10
+    private double points = 0;
     private Direction headed = Direction.UP;
-    Timer t = new Timer(5,this);
+    Timer t = new Timer(2,this); //a rajzolások gyakorisága
     private boolean moved = false;
-
     private ArrayList<Coord> headRoute = new ArrayList<>();
 
     //items vars and methods
 
     private int hasBeenDownFor = 0; //updated in actionPerformed
-    private int indexOfCurrentItem = 0;
+
     private boolean itemIsDown = false;
 
     public boolean isItemDown(){
         return itemIsDown;
     }
 
-    private Item [] foods = new Item[4];
+    private Item[] foods = new Item[4];
 
 
     private void initItems(){
@@ -51,11 +53,74 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     private boolean isCoordinateOccupied(int x, int y) {
         for (Coord bodyPart : body) {
             if (bodyPart.x == x && bodyPart.y == y) {
-                return true;  // Coordinate is occupied by the snake
+                return true;  
             }
         }
-        return false;  // Coordinate is not occupied
+        return false;
     }
+
+
+    private boolean ateFood() {
+        Coord head = getHead();
+        int margin = 5;
+
+        for (int i = 0; i < foods.length; i++) {
+            Item food = foods[i];
+            int foodX = food.getXcord();
+            int foodY = food.getYcord();
+            if (head.x + 20 >= foodX - margin && head.x <= foodX + 20 + margin &&
+                    head.y + 20 >= foodY - margin && head.y <= foodY + 20 + margin) {
+                //+extra features based on food type
+                if (food.equals(foods[0])){//kek
+                    points +=15;
+                    addSize(10);
+
+                    double lastVel = velcoity;
+                    //stack overflow, de nem teljes másolat: https://stackoverflow.com/questions/1519091/scheduledexecutorservice-with-variable-delay
+                    velcoity = velcoity + 0.3*velcoity;
+                    ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+                    scheduler.schedule(() -> {
+                        velcoity = lastVel;
+                        scheduler.shutdown();
+                    }, 8, TimeUnit.SECONDS);
+                    //stack overflow end
+                } else if (food.equals(foods[1])){ //pink
+                    points +=30;
+                    addSize(20);
+
+                    double lastVel = velcoity;
+                    velcoity = velcoity + 0.4*velcoity;
+                    ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+                    scheduler.schedule(() -> {
+                        velcoity = lastVel;
+                        scheduler.shutdown();
+                    }, 5, TimeUnit.SECONDS);
+                }else if (food.equals(foods[2])){//piros
+                    points +=5;
+                    addSize(10);
+                }else if (food.equals(foods[3])){//cyan
+                    points -= 5;
+                    addSize(10);
+
+                    double lastVel = velcoity;
+                    velcoity = velcoity - 0.3*velcoity;
+                    ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+                    scheduler.schedule(() -> {
+                        velcoity = lastVel;
+                        scheduler.shutdown();
+                    }, 7, TimeUnit.SECONDS);
+                }
+                food.setXcord(-50);
+                food.setYcord(-50);
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
+
 
 
 
@@ -64,10 +129,9 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     public void addSize(int siz) {
         size += siz;
 
-        // Add new Coord objects to the body for the increased size
         Coord lastBodyPart = body.get(body.size() - 1);
         for (int i = 0; i < siz; i++) {
-            body.add(new Coord(lastBodyPart.x, lastBodyPart.y + 20)); // Assuming 20 is the size of each rectangle
+            body.add(new Coord(lastBodyPart.x, lastBodyPart.y + 20));
         }
 
         repaint();
@@ -92,15 +156,13 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     //not good
     public boolean selfCollision() {
         Coord head = getHead();
-        //return false;
-        // Start from the second element (index 1) since the head is at index 0
         for (int i = 1; i < getSizeOfSnake(); i++) {
             Coord bodyPart = body.get(i);
             if (head.equals(bodyPart)) {
-                return true;  // Collision detected
+                return true;
             }
         }
-        return false;  // No collision
+        return false;
     }
 
 
@@ -120,7 +182,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     }
 
 
-    public int getSizeOfSnake() {
+    public double getSizeOfSnake() {
         return size;
     }
 
@@ -162,11 +224,11 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
                 System.err.println("Vegeeeeeeeeeeee");
                 Main.exit();
             }
+
         }
     }
 
 
-    //minden body part újra rajzolása uj helyen
     @Override
     public void actionPerformed(ActionEvent e) {
         if (moved) {
@@ -191,25 +253,21 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
                     randomY = random.nextInt(600);
                 } while (isCoordinateOccupied(randomX, randomY));
                 int randomNumber = random.nextInt(100);
-                if (randomNumber <= 40 && randomNumber >= 1) { //40%
+                if (randomNumber <= 35 && randomNumber >= 1) { //35%
                     foods[2].setXcord(randomX);
                     foods[2].setYcord(randomY);
                     itemIsDown = true;
-                } else if (randomNumber <= 60) { // de nagyobb mint 30 //20%
+                } else if (randomNumber <= 70) { // de nagyobb mint 35 //35%
                     foods[0].setXcord(randomX);
                     foods[0].setYcord(randomY);
                     itemIsDown = true;
-                } else if (randomNumber <= 80) { //de nagyobb mint 60 //20%
+                } else if (randomNumber <= 90) { //de nagyobb mint 70 //20%
                     foods[3].setXcord(randomX);
                     foods[3].setYcord(randomY);
                     itemIsDown = true;
-                } else if (randomNumber<=90){//de nagyobb mint 80 //10%
+                } else {//maradek 10%
                     foods[1].setXcord(randomX);
                     foods[1].setYcord(randomY);
-                    itemIsDown = true;
-                }else {
-                    foods[2].setXcord(randomX);
-                    foods[2].setYcord(randomY);
                     itemIsDown = true;
                 }
 
@@ -227,6 +285,11 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
                 //remove item from board
             }
             repaint();
+            if (ateFood()){
+                System.out.println("nyam nyam " +size +" " + points);
+                itemIsDown = false;
+                hasBeenDownFor = 0;
+            }
         }
     }
 
