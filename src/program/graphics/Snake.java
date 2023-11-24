@@ -229,7 +229,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
             if (hitWall() || selfCollision()) {
                 //System.err.println("Vegeeeeeeeeeeee");
                 Rangletra uj = new Rangletra(currentPlayer,points);
-                window.endOfGame(uj);
+                window.endOfGame(uj,points);
                 return;
             }
 

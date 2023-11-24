@@ -43,6 +43,8 @@ public class SnakeWindow extends JFrame {
     private JButton ujJatekButton = new JButton("Menü");
 
     private Data highScores = new Data();
+    private Integer points =0;
+    private JLabel poiontsLabel = null;
 
 
     //menu vege
@@ -55,7 +57,8 @@ public class SnakeWindow extends JFrame {
 
 
 
-    public void endOfGame(Rangletra elem){
+    public void endOfGame(Rangletra elem,Integer points){
+        this.points = points;
         highScores.addIfNeded(elem);
         this.UpdatehighScores(this.highScores);
         Main.setHighscores(highScores);
@@ -66,10 +69,11 @@ public class SnakeWindow extends JFrame {
         if (gameFrame.isVisible()){
             gameFrame.setVisible(false);
         }
-        ujJatekFrame.setVisible(true);
-    }
-    private void ujJatek(){
 
+        poiontsLabel.setText("Ponszám: " + this.points);
+
+        ujJatekFrame.pack();
+        ujJatekFrame.setVisible(true);
     }
 
 
@@ -176,6 +180,8 @@ public class SnakeWindow extends JFrame {
         ujJatekPanel.add(kilepes2);
         ujJatekFrame.add(ujJatekPanel);
         ujJatekFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        poiontsLabel = new JLabel("");
+        ujJatekPanel.add(poiontsLabel);
         ujJatekFrame.pack();
 
         //alap menu
