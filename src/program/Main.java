@@ -1,5 +1,4 @@
 package program;
-import program.graphics.Game;
 import program.graphics.SnakeWindow;
 import tests.*;
 
@@ -10,6 +9,9 @@ public class Main {
     public static Data getHighscores(){
         return highscores;
     }
+    public static void setHighscores(Data highscores){
+        Main.highscores =highscores;
+    }
 
     public static void main(String[] args) {
         if (args.length >0){
@@ -19,7 +21,8 @@ public class Main {
         }
 
         highscores.readFromXML("rangletra.xml");
-        Game.Start();
+        Data highscores = Main.getHighscores();
+        SnakeWindow window = new SnakeWindow("snake",highscores);
 
 
     }

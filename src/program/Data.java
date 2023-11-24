@@ -61,16 +61,6 @@ public class Data {
     }
 
 
-
-    public static class Rangletra{
-        public Rangletra(String n, Integer p){
-            nev = n;
-            pontszam = p;
-        }
-        private String nev;
-        private Integer pontszam;
-    }
-
     public void writeToXML(String fileName) {
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -128,4 +118,5 @@ public class Data {
             e.printStackTrace();
         }
     }
+
 };

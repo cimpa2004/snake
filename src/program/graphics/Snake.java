@@ -2,8 +2,7 @@ package program.graphics;
 
 import program.Coord;
 import program.Items.*;
-import program.Main;
-
+import program.Rangletra;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -23,11 +22,13 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     public double velcoity = 3;
     private ArrayList<Coord> body = new ArrayList<>();
     private double size = 30; //1 =10
-    private double points = 0;
+    private Integer points = 0;
     private Direction headed = Direction.UP;
     Timer t = new Timer(0,this); //a rajzolások gyakorisága
     private boolean moved = false;
     private ArrayList<Coord> headRoute = new ArrayList<>();
+    private String currentPlayer;
+    private SnakeWindow window = null;
 
     //items vars and methods
 
@@ -130,13 +131,18 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
 
         repaint();
     }
-    public Snake() {
+    public Snake(String currentPlayer, SnakeWindow window){
+        body = new ArrayList<>();
         t.start();
         initializeSnake();
         addKeyListener(this);
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
         initItems();
+        System.out.println(currentPlayer);
+        System.out.println(this.getHead().x + " " +  this.getHead().y);
+        this.currentPlayer = currentPlayer;
+        this.window = window;
     }
 
     private void initializeSnake() {
@@ -153,6 +159,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
         for (int i = 1; i < getSizeOfSnake(); i++) {
             Coord bodyPart = body.get(i);
             if (head.equals(bodyPart)) {
+                System.out.println("self col");
                 return true;
             }
         }
@@ -164,12 +171,16 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     public boolean hitWall() {
         Coord head = getHead();
         if (head.x < 0){
+            System.out.println("outsidex");
             return true;
         }else if (head.x >= 950) {
+            System.out.println("outsidex");
             return true;
         } else if (head.y < 0) {
+            System.out.println("outsidey");
             return true;
         } else if (head.y >= 690) {
+            System.out.println("outsidey");
             return true;
         }
         return false;
@@ -214,9 +225,11 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
             g2.setColor(Color.cyan);
             g2.fill(new Rectangle2D.Double(foods[3].getXcord(),foods[3].getYcord(),20,20));
             g2.setColor(Color.black);
+
             if (hitWall() || selfCollision()) {
                 System.err.println("Vegeeeeeeeeeeee");
-                Main.exit();
+                Rangletra uj = new Rangletra(currentPlayer,points);
+                window.endOfGame(uj);//uj jatek inkabb
             }
 
         }
@@ -226,12 +239,6 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (moved) {
-            if (hitWall() || selfCollision()) {
-                System.err.println("Vegeeeeeeeeeeee");
-                Main.exit();
-                return;
-            }
-
             Coord head = new Coord(body.get(0).x + velX, body.get(0).y + velY);
 
             updateBody(head);

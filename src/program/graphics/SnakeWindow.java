@@ -27,6 +27,7 @@ public class SnakeWindow extends JFrame {
     private JButton jatek = new JButton("Jatek");
     private JButton rangletra = new JButton("Rangletra");
     private JButton kilepes = new JButton("Kilepes");
+    private JButton kilepes2 = new JButton("Kilepes");
     private JButton vissza = new JButton("Vissza");
     private JButton nevMegadas = new JButton("Játék");
 
@@ -36,6 +37,13 @@ public class SnakeWindow extends JFrame {
     private JLabel nevMegadLabel = new JLabel("Név:");
     private JTextField nevMegadField = new JTextField();
 
+    private JFrame ujJatekFrame = new JFrame();
+
+    private JPanel ujJatekPanel = new JPanel();
+    private JButton ujJatekButton = new JButton("Menü");
+
+    private Data highScores = new Data();
+
 
     //menu vege
 
@@ -43,16 +51,33 @@ public class SnakeWindow extends JFrame {
 
     private JFrame gameFrame ;
 
-    public static Snake snake = new Snake();
+    public static Snake snake = null;
 
 
 
+    public void endOfGame(Rangletra elem){
+        highScores.addIfNeded(elem);
+        this.UpdatehighScores(this.highScores);
+        Main.setHighscores(highScores);
+        showEndGamePanel();
+    }
 
+    public void showEndGamePanel(){
+        if (gameFrame.isVisible()){
+            gameFrame.setVisible(false);
+        }
+        ujJatekFrame.setVisible(true);
+    }
+    private void ujJatek(){
+
+    }
 
 
     public void showMenu(){
         if (rangletraFrame.isVisible()){
             rangletraFrame.setVisible(false);
+        }else if (ujJatekFrame.isVisible()){
+            ujJatekFrame.setVisible(false);
         }
         menuFrame.setVisible(true);
 
@@ -76,12 +101,22 @@ public class SnakeWindow extends JFrame {
         if (nevMegadFrame.isVisible()){
             nevMegadFrame.setVisible(false);
         }
+        gameFrame = new JFrame("Game");
+
+        gameFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        gameFrame.setSize(1000,750);
+        gameFrame.setResizable(false);
+        gameFrame.getRootPane().setBorder(BorderFactory.createLineBorder(Color.BLACK, 10));
         gameFrame.setVisible(true);
+        snake = new Snake(currentPlayer,this);
+        gameFrame.add(snake);
+        //gameFrame.pack();
     }
 
 
 
     public void UpdatehighScores(Data highScores){
+        this.highScores = highScores;
         rangletraPanel.removeAll();
 
         rangletraPanel.add(helyezes);
@@ -139,13 +174,17 @@ public class SnakeWindow extends JFrame {
         nevMegadFrame.pack();
 
 
+        ujJatekButton.addActionListener(ujJatekListener);
+        kilepes2.addActionListener(exitButtonListener);
+        ujJatekPanel.add(ujJatekButton);
+        ujJatekPanel.add(kilepes2);
+        ujJatekFrame.add(ujJatekPanel);
+        ujJatekFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        ujJatekFrame.pack();
+
+
         //game
-        gameFrame = new JFrame("Game");
-        gameFrame.add(snake);
-        gameFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        gameFrame.setSize(1000,750);
-        gameFrame.setResizable(false);
-        gameFrame.getRootPane().setBorder(BorderFactory.createLineBorder(Color.BLACK, 10));
+
 
 
 
@@ -186,6 +225,12 @@ public class SnakeWindow extends JFrame {
         public void actionPerformed(ActionEvent e) {
             currentPlayer = nevMegadField.getText();
             showGame();
+        }
+    };
+    private ActionListener ujJatekListener = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            showMenu();
         }
     };
 }
