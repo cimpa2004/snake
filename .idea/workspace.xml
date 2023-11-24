@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="truly replayable with scores display on console">
-      <change afterPath="$PROJECT_DIR$/Tests/program/CoordTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/program/DataTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/program/Items/BlueItemTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/program/Items/CyanItemTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/program/Items/ItemTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/program/Items/PinkItemTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/program/Items/RedItemTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/program/MainTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/program/RangletraTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/program/graphics/SnakeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/program/graphics/SnakeWindowTest.java" afterDir="false" />
+    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="aded test files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snake.iml" beforeDir="false" afterPath="$PROJECT_DIR$/snake.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/program/graphics/SnakeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/program/graphics/SnakeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/graphics/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/Snake.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/TestMain.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +86,7 @@
       <recent name="program" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="program.Main" />
       <module name="snake" />
@@ -112,9 +100,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in snake" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snake" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.All in snake" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.All in snake" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +143,7 @@
       <workItem from="1700148591313" duration="3374000" />
       <workItem from="1700498284716" duration="356000" />
       <workItem from="1700822953728" duration="8026000" />
-      <workItem from="1700832181962" duration="2018000" />
+      <workItem from="1700832181962" duration="3683000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -248,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700831853872</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="aded test files">
+      <option name="closed" value="true" />
+      <created>1700834239391</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700834239391</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +278,7 @@
     <MESSAGE value="snake no longer goes throug itself maybe probably" />
     <MESSAGE value="replayable" />
     <MESSAGE value="truly replayable with scores display on console" />
-    <option name="LAST_COMMIT_MESSAGE" value="truly replayable with scores display on console" />
+    <MESSAGE value="aded test files" />
+    <option name="LAST_COMMIT_MESSAGE" value="aded test files" />
   </component>
 </project>

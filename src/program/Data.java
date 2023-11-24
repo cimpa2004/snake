@@ -12,19 +12,6 @@ public class Data {
 
     private Rangletra [] top5helyezett = new Rangletra[5];
 
-    public void print(){//buggy de tesztre jo
-        for (int i = 0;i<top5helyezett.length;i++){
-            System.out.println(top5helyezett[i].nev + " " + top5helyezett[i].pontszam);
-        }
-    }
-
-    public Rangletra getAtIndex(int index){
-        if (index >=0 && index < top5helyezett.length){
-            return top5helyezett[index];
-        }
-        System.err.println("Felre indexeles");
-        return null;
-    }
     public String getAtIndexString(int index){
         if (index >=0 && index < top5helyezett.length){
             return top5helyezett[index].nev;
@@ -50,14 +37,6 @@ public class Data {
                 break;
             }
         }
-    }
-
-    public void sort() {
-        Arrays.sort(top5helyezett, (a, b) -> {
-            if (a == null) return 1;
-            if (b == null) return -1;
-            return b.pontszam - a.pontszam;
-        });
     }
 
 

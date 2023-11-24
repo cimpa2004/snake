@@ -51,7 +51,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
 
     }
 
-    private boolean isCoordinateOccupied(int x, int y) {
+    public boolean isCoordinateOccupied(int x, int y) {
         for (Coord bodyPart : body) {
             if (bodyPart.x == x && bodyPart.y == y) {
                 return true;  
@@ -153,7 +153,6 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
         }
     }
 
-    //not good
     public boolean selfCollision() {
         Coord head = getHead();
         for (int i = 1; i < getSizeOfSnake(); i++) {
@@ -167,7 +166,6 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     }
 
 
-    // nem tokéletes
     public boolean hitWall() {
         Coord head = getHead();
         if (head.x < 0){
@@ -200,7 +198,6 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     }
 
 
-    //rewrite for snake
     @Override
     public void paintComponent(Graphics g){
         if (moved) {
@@ -337,6 +334,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
         velX = -1*velcoity;
         moved = true;
     }
+
     public void keyPressed(KeyEvent e){
         int code = e.getKeyCode();
         if (code == KeyEvent.VK_A){

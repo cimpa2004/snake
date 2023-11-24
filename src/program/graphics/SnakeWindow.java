@@ -46,15 +46,13 @@ public class SnakeWindow extends JFrame {
     private Integer points =0;
     private JLabel poiontsLabel = null;
 
-
-    //menu vege
-
-    //game
-
     private JFrame gameFrame ;
 
     public static Snake snake = null;
 
+    private JMenuBar menuBar = new JMenuBar();
+    private JMenu fileMenu = new JMenu("File");
+    private JMenuItem exitMenuItem = new JMenuItem("Exit");
 
 
     public void endOfGame(Rangletra elem,Integer points){
@@ -139,6 +137,9 @@ public class SnakeWindow extends JFrame {
     }
     public SnakeWindow(String s, Data highScores){
         super(s);
+        exitMenuItem.addActionListener(exitButtonListener);
+        fileMenu.add(exitMenuItem);
+        menuBar.add(fileMenu);
         jatek.setBackground(Color.cyan);
         rangletra.setBackground(Color.cyan);
         kilepes.setBackground(Color.cyan);
@@ -153,6 +154,7 @@ public class SnakeWindow extends JFrame {
         kilepes.addActionListener(exitButtonListener);
 
         menuFrame.add(mainMenu);
+        menuFrame.setJMenuBar(menuBar);
         menuFrame.pack();
         menuFrame.setMinimumSize(new Dimension(200, 300));
         menuFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -225,4 +227,5 @@ public class SnakeWindow extends JFrame {
             showMenu();
         }
     };
+
 }
