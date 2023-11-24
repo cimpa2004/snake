@@ -21,7 +21,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     double  velX = 0, velY = 0;
     public double velcoity = 3;
     private ArrayList<Coord> body = new ArrayList<>();
-    private double size = 30; //1 =10
+    private int size = 30; //1 =10
     private Integer points = 0;
     private Direction headed = Direction.UP;
     Timer t = new Timer(0,this); //a rajzolások gyakorisága
@@ -42,6 +42,22 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
 
     private Item[] foods = new Item[4];
 
+    //for tests:
+
+    public Coord getSecond(){
+        return body.get(1);
+    }
+    public void setHead(int x, int y){
+        this.body.set(0,new Coord(x,y));
+    }
+
+    public void moveAFood(int x, int y,int index){
+        foods[index].setXcord(x);
+        foods[index].setYcord(y);
+
+    }
+
+    //for test end
 
     private void initItems(){
         foods[0] = new BlueItem(-50,-50);
@@ -185,7 +201,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     }
 
 
-    public double getSizeOfSnake() {
+    public int getSizeOfSnake() {
         return size;
     }
 

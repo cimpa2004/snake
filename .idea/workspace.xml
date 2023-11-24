@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="aded test files">
+    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="aded 1 test and menubar to menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/program/graphics/SnakeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/program/graphics/SnakeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/BlueItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/BlueItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/CyanItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/CyanItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/PinkItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/PinkItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/RedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/RedItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/graphics/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/Snake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +89,7 @@
       <recent name="program" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All in snake">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="program.Main" />
       <module name="snake" />
@@ -114,8 +117,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.All in snake" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +146,7 @@
       <workItem from="1700148591313" duration="3374000" />
       <workItem from="1700498284716" duration="356000" />
       <workItem from="1700822953728" duration="8026000" />
-      <workItem from="1700832181962" duration="3683000" />
+      <workItem from="1700832181962" duration="6048000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -257,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700834239391</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="aded 1 test and menubar to menu">
+      <option name="closed" value="true" />
+      <created>1700835978711</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700835978711</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +290,7 @@
     <MESSAGE value="replayable" />
     <MESSAGE value="truly replayable with scores display on console" />
     <MESSAGE value="aded test files" />
-    <option name="LAST_COMMIT_MESSAGE" value="aded test files" />
+    <MESSAGE value="aded 1 test and menubar to menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="aded 1 test and menubar to menu" />
   </component>
 </project>

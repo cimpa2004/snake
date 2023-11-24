@@ -4,7 +4,7 @@ public abstract class  Item {
     protected int xcord;
     protected int ycord;
 
-    protected int sizeadded;
+
     protected int pointsadded;
     protected double speedmodifyer;
     protected int speedchangedtime;//in sec
