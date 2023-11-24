@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="snake no longer goes throug itself maybe probably">
-      <change afterPath="$PROJECT_DIR$/src/program/Rangletra.java" afterDir="false" />
+    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="replayable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/graphics/Game.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/graphics/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/Snake.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" afterDir="false" />
     </list>
@@ -129,7 +125,7 @@
       <workItem from="1700074639199" duration="150000" />
       <workItem from="1700148591313" duration="3374000" />
       <workItem from="1700498284716" duration="356000" />
-      <workItem from="1700822953728" duration="6437000" />
+      <workItem from="1700822953728" duration="7886000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -219,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700824563795</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="replayable">
+      <option name="closed" value="true" />
+      <created>1700830336505</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700830336505</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +242,7 @@
     <MESSAGE value="Items now spawn on the screen &#10;they cant be collected yet&#10;changed window size" />
     <MESSAGE value="moved snake class aded eating and speed boosts" />
     <MESSAGE value="snake no longer goes throug itself maybe probably" />
-    <option name="LAST_COMMIT_MESSAGE" value="snake no longer goes throug itself maybe probably" />
+    <MESSAGE value="replayable" />
+    <option name="LAST_COMMIT_MESSAGE" value="replayable" />
   </component>
 </project>

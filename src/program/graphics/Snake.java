@@ -171,16 +171,16 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     public boolean hitWall() {
         Coord head = getHead();
         if (head.x < 0){
-            System.out.println("outsidex");
+            System.out.println("outside x");
             return true;
         }else if (head.x >= 950) {
-            System.out.println("outsidex");
+            System.out.println("outside x");
             return true;
         } else if (head.y < 0) {
-            System.out.println("outsidey");
+            System.out.println("outside y");
             return true;
         } else if (head.y >= 690) {
-            System.out.println("outsidey");
+            System.out.println("outside y");
             return true;
         }
         return false;
@@ -227,9 +227,10 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
             g2.setColor(Color.black);
 
             if (hitWall() || selfCollision()) {
-                System.err.println("Vegeeeeeeeeeeee");
+                //System.err.println("Vegeeeeeeeeeeee");
                 Rangletra uj = new Rangletra(currentPlayer,points);
-                window.endOfGame(uj);//uj jatek inkabb
+                window.endOfGame(uj);
+                return;
             }
 
         }
@@ -287,7 +288,8 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
             }
             repaint();
             if (ateFood()){
-                System.out.println("nyam nyam " +size +" " + points);
+                //System.out.println("nyam nyam " +size +" " + points);
+                System.out.println("Points: " + points);
                 itemIsDown = false;
                 hasBeenDownFor = 0;
             }
@@ -369,6 +371,8 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
             addSize(10);
         }else if (code == KeyEvent.VK_O){//cheat to be removed
             velcoity += 2;
+        } else if (code == KeyEvent.VK_P){//cheat to be removed
+            velcoity -= 2;
         }
 
 

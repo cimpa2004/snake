@@ -102,7 +102,6 @@ public class SnakeWindow extends JFrame {
             nevMegadFrame.setVisible(false);
         }
         gameFrame = new JFrame("Game");
-
         gameFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         gameFrame.setSize(1000,750);
         gameFrame.setResizable(false);
@@ -110,7 +109,6 @@ public class SnakeWindow extends JFrame {
         gameFrame.setVisible(true);
         snake = new Snake(currentPlayer,this);
         gameFrame.add(snake);
-        //gameFrame.pack();
     }
 
 
@@ -137,7 +135,6 @@ public class SnakeWindow extends JFrame {
     }
     public SnakeWindow(String s, Data highScores){
         super(s);
-
         jatek.setBackground(Color.cyan);
         rangletra.setBackground(Color.cyan);
         kilepes.setBackground(Color.cyan);
@@ -173,7 +170,6 @@ public class SnakeWindow extends JFrame {
         nevMegadFrame.add(nevMegadPanel);
         nevMegadFrame.pack();
 
-
         ujJatekButton.addActionListener(ujJatekListener);
         kilepes2.addActionListener(exitButtonListener);
         ujJatekPanel.add(ujJatekButton);
@@ -182,18 +178,8 @@ public class SnakeWindow extends JFrame {
         ujJatekFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         ujJatekFrame.pack();
 
-
-        //game
-
-
-
-
-
         //alap menu
         showMenu();
-
-
-
     }
     private ActionListener visszaButtonListener = new ActionListener() {
         @Override
