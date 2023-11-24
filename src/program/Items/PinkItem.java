@@ -3,10 +3,9 @@ package program.Items;
 public class PinkItem extends Item{
     public PinkItem(int x, int y) {
         super(x, y);
-        rarity = 2;
         pointsadded = 30;
         sizeadded = 2;
-        speedmodifyer = 15;
+        speedmodifyer = 0.4;
         speedchangedtime = 5;
     }
 }

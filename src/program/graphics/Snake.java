@@ -25,7 +25,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     private double size = 30; //1 =10
     private double points = 0;
     private Direction headed = Direction.UP;
-    Timer t = new Timer(2,this); //a rajzolások gyakorisága
+    Timer t = new Timer(0,this); //a rajzolások gyakorisága
     private boolean moved = false;
     private ArrayList<Coord> headRoute = new ArrayList<>();
 
@@ -70,14 +70,13 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
             int foodY = food.getYcord();
             if (head.x + 20 >= foodX - margin && head.x <= foodX + 20 + margin &&
                     head.y + 20 >= foodY - margin && head.y <= foodY + 20 + margin) {
-                //+extra features based on food type
                 if (food.equals(foods[0])){//kek
-                    points +=15;
+                    points +=foods[0].getPointsadded();
                     addSize(10);
 
                     double lastVel = velcoity;
                     //stack overflow, de nem teljes másolat: https://stackoverflow.com/questions/1519091/scheduledexecutorservice-with-variable-delay
-                    velcoity = velcoity + 0.3*velcoity;
+                    velcoity = velcoity + foods[0].getSpeedmodifyer()*velcoity;
                     ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
                     scheduler.schedule(() -> {
                         velcoity = lastVel;
@@ -85,25 +84,25 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
                     }, 8, TimeUnit.SECONDS);
                     //stack overflow end
                 } else if (food.equals(foods[1])){ //pink
-                    points +=30;
+                    points +=foods[1].getPointsadded();
                     addSize(20);
 
                     double lastVel = velcoity;
-                    velcoity = velcoity + 0.4*velcoity;
+                    velcoity = velcoity + foods[1].getSpeedmodifyer()*velcoity;
                     ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
                     scheduler.schedule(() -> {
                         velcoity = lastVel;
                         scheduler.shutdown();
                     }, 5, TimeUnit.SECONDS);
                 }else if (food.equals(foods[2])){//piros
-                    points +=5;
+                    points +=foods[2].getPointsadded();
                     addSize(10);
                 }else if (food.equals(foods[3])){//cyan
-                    points -= 5;
+                    points += foods[3].getPointsadded();
                     addSize(10);
 
                     double lastVel = velcoity;
-                    velcoity = velcoity - 0.3*velcoity;
+                    velcoity = velcoity + foods[3].getSpeedmodifyer()*velcoity;
                     ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
                     scheduler.schedule(() -> {
                         velcoity = lastVel;
@@ -117,11 +116,6 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
         }
         return false;
     }
-
-
-
-
-
 
 
 
@@ -364,8 +358,10 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
                 headed = Direction.DOWN;
                 down();
             }
-        }else if (code == KeyEvent.VK_L){//cheat
+        }else if (code == KeyEvent.VK_L){//cheat to be removed
             addSize(10);
+        }else if (code == KeyEvent.VK_O){//cheat to be removed
+            velcoity += 2;
         }
 
 

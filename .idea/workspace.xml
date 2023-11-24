@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="">
+    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="moved snake class aded eating and speed boosts">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/Items/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/Snake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/BlueItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/BlueItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/CyanItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/CyanItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/PinkItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/PinkItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/RedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/RedItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/graphics/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/Snake.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +128,9 @@
       <workItem from="1700052014285" duration="7437000" />
       <workItem from="1700060907377" duration="4486000" />
       <workItem from="1700074639199" duration="150000" />
-      <workItem from="1700148591313" duration="3287000" />
+      <workItem from="1700148591313" duration="3374000" />
+      <workItem from="1700498284716" duration="356000" />
+      <workItem from="1700822953728" duration="1512000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -197,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700065349342</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="moved snake class aded eating and speed boosts">
+      <option name="closed" value="true" />
+      <created>1700151985511</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700151985511</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +229,7 @@
     <MESSAGE value="now the snakes movement is fine and its no longer a dot its a snake, but selfCollisons have issues" />
     <MESSAGE value="snake moves normaly with some small issues L key adds a size" />
     <MESSAGE value="Items now spawn on the screen &#10;they cant be collected yet&#10;changed window size" />
-    <option name="LAST_COMMIT_MESSAGE" value="Items now spawn on the screen &#10;they cant be collected yet&#10;changed window size" />
+    <MESSAGE value="moved snake class aded eating and speed boosts" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved snake class aded eating and speed boosts" />
   </component>
 </project>
