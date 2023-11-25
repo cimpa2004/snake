@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="aded 1 test and menubar to menu">
+    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="added tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/program/CoordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/program/CoordTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/program/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/program/DataTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/program/graphics/SnakeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/program/graphics/SnakeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/Items/BlueItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/BlueItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/Items/CyanItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/CyanItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/Items/PinkItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/PinkItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/Items/RedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/RedItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/program/graphics/SnakeWindowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/program/graphics/SnakeWindowTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Rangletra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Rangletra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/graphics/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/Snake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/SnakeWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +46,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://diff.txt" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -54,31 +58,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/bzdez/Desktop/nagyHF/snake",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bzdez/Desktop/nagyHF/snake&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -146,7 +150,8 @@
       <workItem from="1700148591313" duration="3374000" />
       <workItem from="1700498284716" duration="356000" />
       <workItem from="1700822953728" duration="8026000" />
-      <workItem from="1700832181962" duration="6048000" />
+      <workItem from="1700832181962" duration="6090000" />
+      <workItem from="1700909332438" duration="5693000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -268,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700835978711</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added tests">
+      <option name="closed" value="true" />
+      <created>1700838300086</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700838300086</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +304,7 @@
     <MESSAGE value="truly replayable with scores display on console" />
     <MESSAGE value="aded test files" />
     <MESSAGE value="aded 1 test and menubar to menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="aded 1 test and menubar to menu" />
+    <MESSAGE value="added tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tests" />
   </component>
 </project>

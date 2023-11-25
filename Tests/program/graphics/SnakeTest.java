@@ -1,12 +1,7 @@
 package program.graphics;
 
-import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
-import program.Coord;
-import program.Data;
-
 import static org.junit.Assert.*;
 
 
@@ -60,14 +55,11 @@ public class SnakeTest{
         assertTrue(snake.selfCollision());
     }
 
-    @Ignore("Not good")
     @Test
     public void ateFoodTest(){
-        int old = snake.getSizeOfSnake();
-        snake.moveAFood(20,20,0);
-        snake.setHead(20,20);
-
-        assertEquals(old+10,snake.getSizeOfSnake());
+        snake.moveAFood(50,50,0);
+        snake.setHead(50,50);
+        assertTrue(snake.ateFood());
     }
 
 

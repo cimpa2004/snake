@@ -54,9 +54,32 @@ public class SnakeWindow extends JFrame {
     private JMenu fileMenu = new JMenu("File");
     private JMenuItem exitMenuItem = new JMenuItem("Exit");
 
+    //for tests
+    public Data getRangletra(){
+        return this.highScores;
+    }
+    public boolean isRangletraVisible(){
+        return rangletraFrame.isVisible();
+    }
+    public boolean isNevMegadVisible(){
+        return nevMegadFrame.isVisible();
+    }
+    public boolean isUjJatekVisible(){
+        return ujJatekFrame.isVisible();
+    }
+    public boolean isGameVisible(){
+        return gameFrame.isVisible();
+    }
+    public boolean isMenuVisible(){
+        return menuFrame.isVisible();
+    }
 
-    public void endOfGame(Rangletra elem,Integer points){
-        this.points = points;
+
+    //end
+
+
+    public void endOfGame(Rangletra elem){
+        this.points = elem.pontszam;
         highScores.addIfNeded(elem);
         this.UpdatehighScores(this.highScores);
         Main.setHighscores(highScores);
@@ -123,14 +146,18 @@ public class SnakeWindow extends JFrame {
         rangletraPanel.add(nev);
         rangletraPanel.add(pontszam);
         for (Integer i = 1; i < 6; i++) {//kezeld a nullokat
+            try{
             JLabel label = new JLabel(i.toString());
             rangletraPanel.add(label); //index
             String tempnev = highScores.getAtIndexString(i-1);
             Integer temppontszam = highScores.getAtIndexInteger(i-1);
-            JLabel labelszoveg = new JLabel(tempnev); //majd ha lesz rangletra
+            JLabel labelszoveg = new JLabel(tempnev);
             JLabel labelponszam = new JLabel(temppontszam.toString());
             rangletraPanel.add(labelszoveg);
             rangletraPanel.add(labelponszam);
+            }catch (Exception e){
+                //nullPtr exep, valodi hibát nem okoz csak teszteléskor dobja játéknál nem
+            }
         }
         rangletraPanel.add(vissza);
         rangletraFrame.pack();

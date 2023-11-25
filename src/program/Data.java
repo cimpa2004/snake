@@ -11,6 +11,16 @@ import java.io.File;
 public class Data {
 
     private Rangletra [] top5helyezett = new Rangletra[5];
+    //for testing
+    public boolean countais(Rangletra elem){
+        for (int i = 0; i<5;i++){
+            if (top5helyezett[i].equals(elem))
+                return true;
+        }
+        return false;
+    }
+
+    //end
 
     public String getAtIndexString(int index){
         if (index >=0 && index < top5helyezett.length){

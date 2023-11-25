@@ -57,6 +57,10 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
 
     }
 
+    public int getPoints(){
+        return points;
+    }
+
     //for test end
 
     private void initItems(){
@@ -77,7 +81,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
     }
 
 
-    private boolean ateFood() {
+    public boolean ateFood() {
         Coord head = getHead();
         int margin = 5;
 
@@ -240,9 +244,8 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
             g2.setColor(Color.black);
 
             if (hitWall() || selfCollision()) {
-                //System.err.println("Vegeeeeeeeeeeee");
                 Rangletra uj = new Rangletra(currentPlayer,points);
-                window.endOfGame(uj,points);
+                window.endOfGame(uj);
                 return;
             }
 
@@ -297,11 +300,9 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
                     foods[i].setXcord(-50);
                     foods[i].setYcord(-50);
                 }
-                //remove item from board
             }
             repaint();
             if (ateFood()){
-                //System.out.println("nyam nyam " +size +" " + points);
                 System.out.println("Points: " + points);
                 itemIsDown = false;
                 hasBeenDownFor = 0;
