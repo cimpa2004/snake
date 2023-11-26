@@ -23,8 +23,8 @@ public class Main {
     }
 
     public static void exit(){
-        //mentesek meg minden//ne irogassuk at most minden futasra
-        //highscores.writeToXML("rangletra.xml");
+        //mentes
+        highscores.writeToXML("rangletra.xml");
         //
         System.exit(0);
     }
