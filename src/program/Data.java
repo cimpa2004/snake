@@ -12,7 +12,7 @@ public class Data {
 
     private Rangletra [] top5helyezett = new Rangletra[5];
     //for testing
-    public boolean countais(Rangletra elem){
+    public boolean countains(Rangletra elem){
         for (int i = 0; i<5;i++){
             if (top5helyezett[i].equals(elem))
                 return true;

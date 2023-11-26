@@ -16,7 +16,6 @@ public class Main {
 
 
         highscores.readFromXML("rangletra.xml");
-        Data highscores = Main.getHighscores();
         SnakeWindow window = new SnakeWindow("snake",highscores);
 
 

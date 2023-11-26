@@ -37,16 +37,16 @@ public class DataTest {
 
     @Test
     public void addIfNededTest(){
-        assertTrue(test.countais(elso));
-        assertTrue(test.countais(masodik));
-        assertTrue(test.countais(harmadik));
-        assertTrue(test.countais(negyedik));
-        assertTrue(test.countais(otodik));
+        assertTrue(test.countains(elso));
+        assertTrue(test.countains(masodik));
+        assertTrue(test.countains(harmadik));
+        assertTrue(test.countains(negyedik));
+        assertTrue(test.countains(otodik));
         test.addIfNeded(nemkerulbe);
-        assertFalse(test.countais(nemkerulbe));
+        assertFalse(test.countains(nemkerulbe));
         test.addIfNeded(bekerul);
-        assertTrue(test.countais(bekerul));
-        assertFalse(test.countais(otodik));
+        assertTrue(test.countains(bekerul));
+        assertFalse(test.countains(otodik));
     }
 
 
