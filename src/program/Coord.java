@@ -22,5 +22,5 @@ public class Coord {
     @Override
     public int hashCode() {
         return Objects.hash(x, y);
-    }
+    }//nem emlélszem miért kellett lehet már nem kell, de maradjon
 }

@@ -7,7 +7,6 @@ public abstract class  Item {
 
     protected int pointsadded;
     protected double speedmodifyer;
-    protected int speedchangedtime;//in sec
 
     public Item(int x, int y){
         xcord = x;

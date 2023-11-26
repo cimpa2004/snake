@@ -5,6 +5,5 @@ public class PinkItem extends Item{
         super(x, y);
         pointsadded = 30;
         speedmodifyer = 0.3;
-        speedchangedtime = 5;
     }
 }

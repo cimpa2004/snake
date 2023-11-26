@@ -6,6 +6,5 @@ public class BlueItem extends Item{
         super(x, y);
         pointsadded = 15;
         speedmodifyer = 0.3;
-        speedchangedtime = 5;
     }
 }

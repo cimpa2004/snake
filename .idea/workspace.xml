@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="added tests">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Coord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Coord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/BlueItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/BlueItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/CyanItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/CyanItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/Items/PinkItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/PinkItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/graphics/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/Snake.java" afterDir="false" />
     </list>
@@ -88,7 +91,7 @@
       <recent name="program" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All in snake">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="program.Main" />
       <module name="snake" />
@@ -116,8 +119,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.All in snake" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +150,7 @@
       <workItem from="1700822953728" duration="8026000" />
       <workItem from="1700832181962" duration="6090000" />
       <workItem from="1700909332438" duration="5804000" />
-      <workItem from="1701003285172" duration="1040000" />
+      <workItem from="1701003285172" duration="5465000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -285,7 +288,31 @@
       <option name="project" value="LOCAL" />
       <updated>1700915112477</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="snake cant go trough itself">
+      <option name="closed" value="true" />
+      <created>1701004353336</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1701004353336</updated>
+    </task>
+    <task id="LOCAL-00019" summary="snake cant go trough itself">
+      <option name="closed" value="true" />
+      <created>1701004454277</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701004454277</updated>
+    </task>
+    <task id="LOCAL-00020" summary="final">
+      <option name="closed" value="true" />
+      <created>1701006038416</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1701006038416</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +336,8 @@
     <MESSAGE value="aded test files" />
     <MESSAGE value="aded 1 test and menubar to menu" />
     <MESSAGE value="added tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tests" />
+    <MESSAGE value="snake cant go trough itself" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
 </project>

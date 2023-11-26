@@ -5,6 +5,5 @@ public class CyanItem extends Item{
         super(x, y);
         pointsadded = -5;
         speedmodifyer = -0.3;
-        speedchangedtime = 7;
     }
 }

@@ -18,13 +18,13 @@ import java.util.concurrent.TimeUnit;
 
 //collison map meret 950*690
 public class Snake extends JPanel implements ActionListener, KeyListener {
-    double  velX = 0, velY = 0;
+    private double  velX = 0, velY = 0;
     public double velcoity = 3;
     private ArrayList<Coord> body = new ArrayList<>();
     private int size = 30; //1 =10
     private Integer points = 0;
     private Direction headed = Direction.UP;
-    Timer t = new Timer(0,this); //a rajzolások gyakorisága
+    private Timer t = new Timer(0,this); //a rajzolások gyakorisága
     private boolean moved = false;
     private ArrayList<Coord> headRoute = new ArrayList<>();
     private String currentPlayer;
@@ -44,9 +44,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
 
     //for tests:
 
-    public Coord getSecond(){
-        return body.get(1);
-    }
+
     public void setHead(int x, int y){
         this.body.set(0,new Coord(x,y));
     }
@@ -57,9 +55,6 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
 
     }
 
-    public int getPoints(){
-        return points;
-    }
 
     //for test end
 
