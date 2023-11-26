@@ -187,7 +187,7 @@ public class Snake extends JPanel implements ActionListener, KeyListener {
         }
 
         // Check collision with body parts with a margin of 5 (except the first 10)
-        for (int i = Math.max(1, getSizeOfSnake() - 10); i < getSizeOfSnake(); i++) {
+        for (int i = Math.max(1, getSizeOfSnake() - 5); i < getSizeOfSnake(); i++) {
             Coord bodyPart = body.get(i);
             if (head.x + 20 + margin >= bodyPart.x && head.x <= bodyPart.x + 20 + margin &&
                     head.y + 20 + margin >= bodyPart.y && head.y <= bodyPart.y + 20 + margin) {
