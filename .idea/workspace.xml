@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="added tests" />
+    <list default="true" id="2b65d9ec-70c0-4dfe-ba72-206eb88cd320" name="Changes" comment="added tests">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Items/PinkItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Items/PinkItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/graphics/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/graphics/Snake.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,6 +147,7 @@
       <workItem from="1700822953728" duration="8026000" />
       <workItem from="1700832181962" duration="6090000" />
       <workItem from="1700909332438" duration="5804000" />
+      <workItem from="1701003285172" duration="1040000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
